@@ -68,16 +68,47 @@
   </header>
   <!-- End Header -->
 
+  <style type="text/css">
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+  <script type="text/javascript">
+
+    function parallax(elem, initial, speed) {
+      var yPos = window.pageYOffset * speed; 
+      elem.style.top = initial + yPos + "px";
+    }
+
+    window.addEventListener("scroll", function(){
+      parallax(document.getElementById("bg"), 0, .8); 
+      parallax(document.getElementById("logos"), 200, .6); 
+      parallax(document.getElementById("Clara"), 1300, -.5); 
+    });
+  </script>
+
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center" style="height: 1500px; background-color: #0067a5;">
+    
+    <img id="bg" src="assets/img/background.png" style="width: 100%; position: absolute; top: 0px">
+
+    <img id="logos" src="assets/img/logo.png" style="width: 70%; margin: auto; position: absolute; top: 200px">
+
+    
+    <!--
     <div class="container text-center text-md-left" data-aos="fade-up">
-      <h1>ARISE</h1>
       <h2>Explore, build, and make friends in an <b>augmented reality</b> underwater paradise</h2>
       <a href="#about" class="btn-get-started scrollto">Get Started</a>
       <br>
       <br>
       <a href="./targets.html" class="btn-get-started scrollto">Jump to the AR Targets</a>
-    </div>
+    </div>-->
+    
+    <img src="assets/img/middle ground.png" style="width: 100%; position: absolute; bottom: 0">
+
+    <img id="Clara" src="assets/img/Clara.png" style="width: 20%; position: absolute; top: 1300px; left: 100px;">
+
   </section>
   <!-- End Hero -->
 
