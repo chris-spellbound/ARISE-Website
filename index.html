@@ -76,38 +76,41 @@
 
   <script type="text/javascript">
 
-    function parallax(elem, initial, speed) {
+    function parallax(elem, speed) {
       var yPos = window.pageYOffset * speed; 
-      elem.style.top = initial + yPos + "px";
+      elem.style.transform= "translate(0px, " + yPos + "px)";
     }
 
     window.addEventListener("scroll", function(){
-      parallax(document.getElementById("bg"), 0, .8); 
-      parallax(document.getElementById("logos"), 200, .6); 
-      parallax(document.getElementById("Clara"), 1300, -.5); 
+      parallax(document.getElementById("bg"), .8); 
+      parallax(document.getElementById("logos"), .6); 
+      parallax(document.getElementById("subheader"), .6); 
+      parallax(document.getElementById("Clara"), -.5); 
+      parallax(document.getElementById("Victor"), -.2); 
     });
   </script>
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center" style="height: 1500px; background-color: #0067a5;">
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center" style="height: 200vh;">
     
-    <img id="bg" src="assets/img/background.png" style="width: 100%; position: absolute; top: 0px">
+    <div id="bg" style="width: 100%; position: absolute; top: 0px; bottom: 0px;">
+      <img src="assets/img/background.png" style="height: 100%; width: 100%; object-fit: cover;">
+    </div>
 
-    <img id="logos" src="assets/img/logo.png" style="width: 70%; margin: auto; position: absolute; top: 200px">
+    <img id="logos" src="assets/img/logo.png" style="width: 70%; margin: auto; position: absolute; top: 10vh">
 
-    
-    <!--
-    <div class="container text-center text-md-left" data-aos="fade-up">
+    <div id="subheader" style="width: 70%; margin: auto; position: absolute; top: 50vh">
       <h2>Explore, build, and make friends in an <b>augmented reality</b> underwater paradise</h2>
       <a href="#about" class="btn-get-started scrollto">Get Started</a>
       <br>
       <br>
       <a href="./targets.html" class="btn-get-started scrollto">Jump to the AR Targets</a>
-    </div>-->
+    </div>
     
     <img src="assets/img/middle ground.png" style="width: 100%; position: absolute; bottom: 0">
 
-    <img id="Clara" src="assets/img/Clara.png" style="width: 20%; position: absolute; top: 1300px; left: 100px;">
+    <img id="Clara" src="assets/img/Clara.png" style="width: 20%; position: absolute; bottom: -30vh; left: 10vw;">
+    <img id="Victor" src="assets/img/Victor.png" style="width: 30%; position: absolute; bottom: 0vh; right: 15vw;">
 
   </section>
   <!-- End Hero -->
